@@ -28,7 +28,7 @@ export default function Home() {
     "
       onMouseMove={handleCursor}
     >
-      hello
+      hello world
     </div>
   );
 }
