@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [xVar, setXVar] = useState<Number>(0);
   const [yVar, setYVar] = useState<Number>(0);
-  const handleCursor = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCursor = (e: MouseEvent) => {
     setXVar(e.clientX);
     setYVar(e.clientY);
   };
