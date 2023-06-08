@@ -13,6 +13,12 @@ module.exports = {
       colors: {
         light: "#C4D1EC",
       },
+      maxWidth: {
+        screenWidth: "1366px",
+      },
+      maxHeight: {
+        screenHeight: "768px",
+      },
     },
   },
   plugins: [],

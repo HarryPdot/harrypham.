@@ -1,11 +1,13 @@
 "use client";
+import { Container } from "@/Components/Resuables/Container/Container";
+import { StatusBar } from "@/Components/StatusBar/StatusBar";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Home() {
   const [xVar, setXVar] = useState<Number>(0);
   const [yVar, setYVar] = useState<Number>(0);
-  const handleCursor = (e: any) => {
+  const handleCursor = (e: Number) => {
     setXVar(e.clientX);
     setYVar(e.clientY);
   };
@@ -21,14 +23,32 @@ export default function Home() {
       testing
       pointer-events-auto 
       m-0
+      flex
       h-full
       w-full
-      bg-darkMode
-      text-light
+      items-center
+      justify-center
+      bg-black
     "
       onMouseMove={handleCursor}
     >
-      hello world
+      <Container
+        className="
+        grid
+        h-4/5
+        max-h-screenHeight
+        w-4/5
+        max-w-screenWidth
+        grid-cols-5
+        grid-rows-5
+        border-2
+        border-solid
+        border-white
+        bg-darkMode
+      "
+      >
+        <StatusBar></StatusBar>
+      </Container>
     </div>
   );
 }
