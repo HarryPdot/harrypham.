@@ -1,4 +1,5 @@
 "use client";
+import { CommandLine } from "@/Components/CommandLine/CommandLine";
 import { Container } from "@/Components/Resuables/Container/Container";
 import { StatusBar } from "@/Components/StatusBar/StatusBar";
 import Image from "next/image";
@@ -47,6 +48,7 @@ export default function Home() {
         bg-darkMode
       "
       >
+        <CommandLine></CommandLine>
         <StatusBar></StatusBar>
       </Container>
     </div>

@@ -15,6 +15,8 @@ module.exports = {
       backgroundColor: {
         darkMode: "#131620",
         bubble: "#F1BA5F",
+        orange: "#AF7728",
+        darkBrown: "#744F23",
       },
       colors: {
         light: "#C4D1EC",
@@ -45,12 +47,16 @@ module.exports = {
       },
       borderColor: {
         outerBubble: "#CB9452",
+        brightOrange: "#F2B340",
       },
       screens: {
         sm: "700px",
         md: "840px",
         lg: "1060px",
         xl: "1450px",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
     },
   },
