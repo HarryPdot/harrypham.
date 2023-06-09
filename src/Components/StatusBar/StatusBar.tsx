@@ -10,7 +10,7 @@ const StatusBar = () => {
   return (
     <Container
       className="
-          col-start-4
+          col-start-1
           col-end-7
           row-start-5
           row-end-7
@@ -19,6 +19,9 @@ const StatusBar = () => {
           items-center
           justify-evenly
           relative
+          xl:col-start-4
+          lg:col-start-3
+          md:col-start-2
     "
     >
       <div className="">

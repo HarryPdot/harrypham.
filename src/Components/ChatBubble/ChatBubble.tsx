@@ -8,8 +8,9 @@ const ChatBubble = () => {
     text-black
     px-8
     py-4
+    text-center
     border-outerBubble
-    border-4
+    border-6
     max-w-xs
     text-medium
     bg-bubble
@@ -25,6 +26,7 @@ const ChatBubble = () => {
     before:border-t-transparent
     before:border-b-transparent
     before:content-['']
+    max-sm:hidden
   "
     >
       I heard having friends is nice. But I wouldnt know because i dont have any
