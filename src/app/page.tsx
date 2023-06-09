@@ -39,8 +39,8 @@ export default function Home() {
         max-h-screenHeight
         w-4/5
         max-w-screenWidth
-        grid-cols-5
-        grid-rows-5
+        grid-cols-6
+        grid-rows-6
         border-2
         border-solid
         border-white

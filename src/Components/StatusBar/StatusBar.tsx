@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "../Resuables/Container/Container";
+import { ChatBubble } from "../ChatBubble/ChatBubble";
 import profilePic from "../../Assets/Images/tempharry.png";
 import { GoMarkGithub as GitHub } from "react-icons/go";
 import { SiLinkedin as LinkedIn } from "react-icons/si";
@@ -9,45 +10,67 @@ const StatusBar = () => {
   return (
     <Container
       className="
-          col-start-5
-          row-start-4
-          row-end-6
+          col-start-4
+          col-end-7
+          row-start-5
+          row-end-7
+          flex
+          flex-row
+          items-center
+          justify-evenly
+          relative
+    "
+    >
+      <div className="">
+        <ChatBubble></ChatBubble>
+      </div>
+      <div
+        className="
           flex
           flex-row
           items-center
           justify-center
           text-light
-          gap-x-4
+          gap-x-2
           "
-    >
-      <section
-        className="
+      >
+        <section
+          className="
           flex
           flex-col
           items-center
           justify-center
       "
-      >
-        <Image src={profilePic} width={200} height={200} alt="profile image" />
-        <h3>Software Engineer</h3>
-      </section>
-      <section
-        className="
+        >
+          <Image
+            src={profilePic}
+            width={200}
+            height={200}
+            alt="profile image"
+          />
+          <h3 className="text-medium">Software Engineer</h3>
+        </section>
+        <section
+          className="
       flex
       flex-col
       gap-5
       "
-      >
-        <a href="https://google.com" target="_blank">
-          <GitHub className="text-3xl hover:text-blue-50"></GitHub>
-        </a>
-        <a href="https://google.com" target="_blank">
-          <LinkedIn className="text-3xl hover:text-blue-50"></LinkedIn>
-        </a>
-        <a href="https://google.com" target="_blank">
-          <Instagram className="text-3xl hover:text-blue-50"></Instagram>
-        </a>
-      </section>
+        >
+          <a href="https://github.com/HarryPdot" target="_blank">
+            <GitHub className="text-large hover:text-blue-50"></GitHub>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/harry-pham-developer/"
+            target="_blank"
+          >
+            <LinkedIn className="text-large hover:text-blue-50"></LinkedIn>
+          </a>
+          <a href="https://www.instagram.com/harryphamdev/" target="_blank">
+            <Instagram className="text-large hover:text-blue-50"></Instagram>
+          </a>
+        </section>
+      </div>
     </Container>
   );
 };

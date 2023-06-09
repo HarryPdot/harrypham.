@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         darkMode: "#131620",
+        bubble: "#F1BA5F",
       },
       colors: {
         light: "#C4D1EC",
@@ -23,6 +24,20 @@ module.exports = {
       },
       maxHeight: {
         screenHeight: "768px",
+      },
+      fontSize: {
+        small: 8,
+        medium: 16,
+        large: 32,
+      },
+      boxShadow: {
+        bubbleShadow: "10px 10px 15px -5px, 8px 8px 10px -5px",
+      },
+      borderWidth: {
+        arrow: "20px",
+      },
+      borderColor: {
+        outerBubble: "#CB9452",
       },
     },
   },
