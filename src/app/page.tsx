@@ -9,8 +9,13 @@ export default function Home() {
   const [xVar, setXVar] = useState<Number>(0);
   const [yVar, setYVar] = useState<Number>(0);
   const handleCursor = (e: any) => {
-    setXVar(e.clientX);
-    setYVar(e.clientY);
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+
+    setXVar(x);
+    setYVar(y);
   };
 
   useEffect(() => {
@@ -21,7 +26,6 @@ export default function Home() {
   return (
     <div
       className="
-      testing
       pointer-events-auto 
       m-0
       flex
@@ -30,6 +34,7 @@ export default function Home() {
       items-center
       justify-center
       bg-black
+      box
     "
       onMouseMove={handleCursor}
     >

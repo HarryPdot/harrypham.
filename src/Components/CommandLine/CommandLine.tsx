@@ -4,6 +4,7 @@ import { useState } from "react";
 const CommandLine = () => {
   const [selection, setSelection] = useState<String>("About");
   const [hover, setHover] = useState<String>("");
+  const [projectHover, setProjectHover] = useState<String>("");
 
   const handleHover = (option: String) => {
     setHover(option);
@@ -11,6 +12,10 @@ const CommandLine = () => {
 
   const handleSelect = () => {
     setSelection(hover);
+  };
+
+  const handleProject = (option: String) => {
+    setProjectHover(option);
   };
 
   const options = ["About", "Projects", "Credit"];
@@ -75,31 +80,35 @@ const CommandLine = () => {
 
         "
         >
-          {selection == "Projects" ? (
-            <div
-              className="
-            text-white
-            p-1
-            rounded-r-3xl
-            bg-gradient-to-tr
-            to-70%
-            from-[#744F23]
-            to-black
-            hover:bg-gradient-radial
-            hover:from-[#744F23]
-            hover:to-80%
-            hover:to-[#AF7728]
-            hover:border-brightOrange
-            hover:border-2
-            hover:w-full
-            text-center
-            w-5/6
-            cursor-pointer
-          "
-            >
-              Hello
-            </div>
-          ) : null}
+          {selection == "Projects" || hover == "Projects"
+            ? options.map((option, i) => {
+                return (
+                  <div
+                    key={i}
+                    className="
+                        text-white
+                        bg-black
+                        p-1
+                        w-full
+                        text-center
+                        cursor-pointer
+                        radialeffect
+                        relative
+                        py-1
+                        rounded-lg
+                        border
+                        border-[#5a1616]
+                        bg-gradient-to-tr to-70% 
+                        from-[#4C1010] 
+                        to-black
+                        hover:to-[#4C1010] 
+                      "
+                  >
+                    {option}
+                  </div>
+                );
+              })
+            : null}
         </div>
       </div>
     </Container>
