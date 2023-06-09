@@ -40,7 +40,7 @@ const CommandLine = () => {
         className="
         flex
         flex-row
-
+        gap-4
 
         justify-between
 
@@ -56,7 +56,28 @@ const CommandLine = () => {
             return (
               <div
                 key={i}
-                className="
+                onMouseOver={() => handleHover(option)}
+                onClick={() => handleSelect()}
+                className={
+                  selection === option
+                    ? " text-white p-1 rounded-r-3xl bg-gradient-radial from-[#744F23] to-80% to-[#AF7728] border-brightOrange border-2 w-full text-center cursor-pointer"
+                    : " text-white p-1 rounded-r-3xl bg-gradient-to-tr to-70% from-[#744F23] to-black hover:bg-gradient-radial hover:from-[#744F23] hover:to-80% hover:to-[#AF7728] hover:border-brightOrange hover:border-2 hover:w-full text-center w-5/6 cursor-pointer "
+                }
+              >
+                {option}
+              </div>
+            );
+          })}
+        </div>
+        <div
+          className="
+          w-2/3
+
+        "
+        >
+          {selection == "Projects" ? (
+            <div
+              className="
             text-white
             p-1
             rounded-r-3xl
@@ -75,21 +96,10 @@ const CommandLine = () => {
             w-5/6
             cursor-pointer
           "
-                onMouseOver={() => handleHover(option)}
-                onClick={() => handleSelect()}
-              >
-                {option}
-              </div>
-            );
-          })}
-        </div>
-        <div
-          className="
-          w-2/3
-
-        "
-        >
-          Hello
+            >
+              Hello
+            </div>
+          ) : null}
         </div>
       </div>
     </Container>
