@@ -13,7 +13,7 @@ body {
   h-screen;
 }
 
-.box {
+/* .box {
   margin: 0;
   pointer-events: auto;
   position: relative;
@@ -33,4 +33,4 @@ body {
   pointer-events: none;
   z-index: 2;
   opacity: 1;
-}
+} */
