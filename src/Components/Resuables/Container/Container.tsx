@@ -4,7 +4,7 @@ interface ContainerProps {
   id?: string;
   children: ReactNode;
   className?: string;
-  onMouseMove?: ReactNode;
+  onMouseMove?: MouseEvent<HTMLButtonElement>;
 }
 
 const Container = (props: ContainerProps) => {
