@@ -1,4 +1,3 @@
-import { Container } from "../Resuables/Container/Container";
 import { useState } from "react";
 
 const CommandLine = () => {
@@ -20,7 +19,7 @@ const CommandLine = () => {
 
   const options = ["About", "Projects", "Credit"];
   return (
-    <Container
+    <section
       className="
       text-light
       col-start-1
@@ -111,7 +110,7 @@ const CommandLine = () => {
             : null}
         </div>
       </div>
-    </Container>
+    </section>
   );
 };
 

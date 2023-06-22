@@ -1,9 +1,8 @@
-import { Container } from "../Resuables/Container/Container";
 import "./ChatBubble.css";
 
 const ChatBubble = () => {
   return (
-    <Container
+    <section
       className="
     text-black
     px-8
@@ -30,7 +29,7 @@ const ChatBubble = () => {
   "
     >
       I heard having friends is nice. But I wouldnt know because i dont have any
-    </Container>
+    </section>
   );
 };
 

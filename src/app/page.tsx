@@ -1,6 +1,5 @@
 "use client";
 import { CommandLine } from "@/Components/CommandLine/CommandLine";
-import { Container } from "@/Components/Resuables/Container/Container";
 import { StatusBar } from "@/Components/StatusBar/StatusBar";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -38,7 +37,7 @@ export default function Home() {
     "
       onMouseMove={handleCursor}
     >
-      <Container
+      <section
         className="
         grid
         h-4/5
@@ -55,7 +54,7 @@ export default function Home() {
       >
         <CommandLine></CommandLine>
         <StatusBar></StatusBar>
-      </Container>
+      </section>
     </div>
   );
 }

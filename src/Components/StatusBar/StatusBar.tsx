@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Container } from "../Resuables/Container/Container";
 import { ChatBubble } from "../ChatBubble/ChatBubble";
 import profilePic from "../../Assets/Images/tempharry.png";
 import { GoMarkGithub as GitHub } from "react-icons/go";
@@ -8,7 +7,7 @@ import { BsInstagram as Instagram } from "react-icons/bs";
 
 const StatusBar = () => {
   return (
-    <Container
+    <section
       className="
           col-start-1
           col-end-7
@@ -74,7 +73,7 @@ const StatusBar = () => {
           </a>
         </section>
       </div>
-    </Container>
+    </section>
   );
 };
 
