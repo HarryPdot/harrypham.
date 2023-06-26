@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { About } from "../Pages/About/About";
-const Screen = ({ selection }) => {
+const Screen = ({ selection }: any) => {
   return (
     <section
       className="
