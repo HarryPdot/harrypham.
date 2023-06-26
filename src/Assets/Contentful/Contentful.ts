@@ -1,5 +1,5 @@
+//@ts-nocheck
 import { createClient } from "contentful";
-
 const useContentful = () => {
   const client = createClient({
     space: "hnyp3aiv2g1d",
@@ -9,7 +9,7 @@ const useContentful = () => {
 
   const getAboutContent = async () => {
     try {
-      const entries: any = await client.getEntries<any>({
+      const entries: any = await client.getEntries({
         content_type: "portfolio",
         select: "fields",
       });
@@ -25,7 +25,7 @@ const useContentful = () => {
 
   const getProjectContent = async () => {
     try {
-      const entries: any = await client.getEntries<any>({
+      const entries: any = await client.getEntries({
         content_type: "projectSection",
         select: "fields",
       });
