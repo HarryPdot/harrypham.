@@ -9,7 +9,7 @@ const useContentful = () => {
 
   const getAboutContent = async () => {
     try {
-      const entries: any = await client.getEntries<unknown>({
+      const entries: any = await client.getEntries<any>({
         content_type: "portfolio",
         select: "fields",
       });
@@ -25,7 +25,7 @@ const useContentful = () => {
 
   const getProjectContent = async () => {
     try {
-      const entries: any = await client.getEntries<unknown>({
+      const entries: any = await client.getEntries<any>({
         content_type: "projectSection",
         select: "fields",
       });
