@@ -9,11 +9,11 @@ const useContentful = () => {
 
   const getAboutContent = async () => {
     try {
-      const entries: any = await client.getEntries<any>({
+      const entries: any = await client.getEntries<unknown>({
         content_type: "portfolio",
         select: "fields",
       });
-      return entries;
+      return entries as any;
     } catch (error) {
       let errorMessage = "Failed to do something exceptional";
       if (error instanceof Error) {
@@ -25,11 +25,11 @@ const useContentful = () => {
 
   const getProjectContent = async () => {
     try {
-      const entries: any = await client.getEntries<any>({
+      const entries: any = await client.getEntries<unknown>({
         content_type: "projectSection",
         select: "fields",
       });
-      return entries.items;
+      return entries.items as any;
     } catch (error) {
       let errorMessage = "Failed to do something exceptional";
       if (error instanceof Error) {
