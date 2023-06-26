@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-const CommandLine = () => {
-  const [selection, setSelection] = useState<String>("About");
+const CommandLine = ({ selection, setSelection }) => {
   const [hover, setHover] = useState<String>("");
   const [projectHover, setProjectHover] = useState<String>("");
 

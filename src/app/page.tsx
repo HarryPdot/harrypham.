@@ -3,8 +3,10 @@ import { CommandLine } from "@/Components/CommandLine/CommandLine";
 import { StatusBar } from "@/Components/StatusBar/StatusBar";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { Screen } from "@/Components/Screen/Screen";
 
 export default function Home() {
+  const [selection, setSelection] = useState<String>("About");
   const [xVar, setXVar] = useState<Number>(0);
   const [yVar, setYVar] = useState<Number>(0);
   const handleCursor = (e: any) => {
@@ -52,8 +54,9 @@ export default function Home() {
         bg-darkMode
       "
       >
-        <CommandLine></CommandLine>
-        <StatusBar></StatusBar>
+        <CommandLine selection={selection} setSelection={setSelection} />
+        <StatusBar />
+        <Screen selection={selection} />
       </section>
     </div>
   );
