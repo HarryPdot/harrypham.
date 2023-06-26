@@ -77,37 +77,7 @@ const CommandLine = ({ selection, setSelection }) => {
           w-2/3
 
         "
-        >
-          {selection == "Projects" || hover == "Projects"
-            ? options.map((option, i) => {
-                return (
-                  <div
-                    key={i}
-                    className="
-                        text-white
-                        bg-black
-                        p-1
-                        w-full
-                        text-center
-                        cursor-pointer
-                        radialeffect
-                        relative
-                        py-1
-                        rounded-lg
-                        border
-                        border-[#5a1616]
-                        bg-gradient-to-tr to-70% 
-                        from-[#4C1010] 
-                        to-black
-                        hover:to-[#4C1010] 
-                      "
-                  >
-                    {option}
-                  </div>
-                );
-              })
-            : null}
-        </div>
+        ></div>
       </div>
     </section>
   );
