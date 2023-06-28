@@ -22,13 +22,18 @@ const CommandLine = ({ selection, setSelection }: any) => {
       className="
       text-light
       col-start-1
-      col-end-4
       row-start-5
       row-end-7
       pl-4
       pr-4
       w-5/6
-
+      xl:col-end-4
+      lg:col-end-5
+      md:hidden
+      sm:hidden
+      lg:block
+      xl:block
+      max-sm:hidden
       "
     >
       <div

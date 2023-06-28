@@ -1,6 +1,6 @@
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { useState, useEffect } from "react";
-
+import "./About.css";
 const About = () => {
   interface aboutProps {
     description: any;
@@ -21,7 +21,18 @@ const About = () => {
     });
   }, []);
 
-  return <div>{about.description}</div>;
+  return (
+    <div className="flex gap-10 h-full w-full justify-center items-center">
+      {/* <picture className="flex justify-center items-center ">
+        <img
+          className="h-full w-full"
+          src={about.image}
+          alt="Landscape picture"
+        />
+      </picture>
+      <div className="">{about.description}</div> */}
+    </div>
+  );
 };
 
 export { About };

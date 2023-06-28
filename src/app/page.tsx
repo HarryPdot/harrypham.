@@ -42,15 +42,16 @@ export default function Home() {
       <section
         className="
         grid
-        h-4/5
+        h-full
+        w-full
         max-h-screenHeight
-        w-4/5
         max-w-screenWidth
-        grid-cols-6
-        grid-rows-6
         border-2
         border-solid
         border-white
+        grid-cols-6
+        grid-rows-6
+
         bg-darkMode
       "
       >

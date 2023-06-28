@@ -13,6 +13,8 @@ const Screen = ({ selection }: any) => {
           border
           h-full
           w-full
+          p-10
+          
           "
     >
       {selection === "About" ? <About /> : null}
