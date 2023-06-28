@@ -9,6 +9,8 @@ const Screen = ({ selection }: any) => {
           col-end-6
           row-start-1
           row-end-5
+          max-md:col-start-1
+          max-md:col-end-7
           text-light
           border-2
           h-full
