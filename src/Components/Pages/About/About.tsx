@@ -23,14 +23,14 @@ const About = () => {
 
   return (
     <div className="flex gap-10 h-full w-full justify-center items-center">
-      {/* <picture className="flex justify-center items-center ">
+      <picture className="flex justify-center items-center max-md:hidden">
         <img
           className="h-full w-full"
           src={about.image}
           alt="Landscape picture"
         />
       </picture>
-      <div className="">{about.description}</div> */}
+      <div className="">{about.description}</div>
     </div>
   );
 };

@@ -10,11 +10,11 @@ const Screen = ({ selection }: any) => {
           row-start-1
           row-end-5
           text-light
-          border
+          border-2
           h-full
           w-full
           p-10
-          
+          border-screen
           "
     >
       {selection === "About" ? <About /> : null}

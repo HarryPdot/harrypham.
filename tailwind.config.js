@@ -48,6 +48,7 @@ module.exports = {
       borderColor: {
         outerBubble: "#CB9452",
         brightOrange: "#F2B340",
+        screen: "#04A29F",
       },
       screens: {
         sm: "700px",
