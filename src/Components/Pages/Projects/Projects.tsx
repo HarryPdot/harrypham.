@@ -22,10 +22,15 @@ const Projects = () => {
     });
   }, []);
 
-  const handleOpen = (item) => {
+  const handleOpen = (item: any) => {
     setOpen(true);
     setSelectProject(item);
     console.log(open);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectProject([]);
   };
 
   return (
@@ -53,7 +58,8 @@ const Projects = () => {
       })}
       {open ? (
         <section className="w-full h-screen bg-black absolute">
-          <div></div>
+          <button onClick={() => handleClose()}>close</button>
+          <div>{selectProject.name}</div>
         </section>
       ) : null}
     </section>
