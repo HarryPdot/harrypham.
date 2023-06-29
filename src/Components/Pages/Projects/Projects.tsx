@@ -28,7 +28,7 @@ const Projects = ({ setOpen, setSelectProject }: any) => {
   };
 
   return (
-    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full absolute">
+    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full absolute pt-2 pb-2">
       {projects.map((item: any, i: number) => {
         return (
           <div
