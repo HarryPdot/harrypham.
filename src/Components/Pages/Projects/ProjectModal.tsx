@@ -15,16 +15,16 @@ const ProjectModal = ({
         <div className="col-start-5 col-end-6 row-start-1 row-end-2 h-fit w-full flex justify-end pr-2 pt-2">
           <button
             onClick={() => handleClose()}
-            className="border border-light px-2"
+            className="border border-light px-2 hover:text-white"
           >
             close
           </button>
         </div>
-        <div className="col-start-1 col-end-4 row-start-1-row-end-2 flex items-center">
+        <div className="col-start-1 col-end-4 row-start-1-row-end-2 flex items-center ">
           <a
             href={selectProject.projectUrl}
             target="_blank"
-            className="text-xl px-5"
+            className="text-xl px-5 underline hover:text-white"
           >
             {selectProject.name}🔗
           </a>

@@ -1,0 +1,7 @@
+.scrolling::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrolling {
+  scroll-behavior: smooth;
+}

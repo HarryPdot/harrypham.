@@ -1,5 +1,6 @@
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { useEffect, useState } from "react";
+import "./Projects.css";
 
 const Projects = ({ setOpen, setSelectProject }: any) => {
   const { getProjectContent } = useContentful();
@@ -24,16 +25,15 @@ const Projects = ({ setOpen, setSelectProject }: any) => {
   const handleOpen = (item: any) => {
     setOpen(true);
     setSelectProject(item);
-    console.log(open);
   };
 
   return (
-    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full absolute pt-2 pb-2">
+    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full absolute pt-2 pb-2 scrolling">
       {projects.map((item: any, i: number) => {
         return (
           <div
             key={i}
-            className="border border-white w-1/4 h-52 cursor-pointer relative rounded-md overflow-hidden"
+            className="border border-white w-1/4 h-52 cursor-pointer relative rounded-md overflow-hidden hover:text-white"
             onClick={() => handleOpen(item)}
           >
             <picture className="">
