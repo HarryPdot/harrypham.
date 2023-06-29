@@ -22,7 +22,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="flex gap-10 h-full w-full justify-center items-center">
+    <div className="flex gap-10 h-full w-full justify-center items-center p-5">
       <picture className="flex justify-center items-center max-md:hidden">
         <img
           className="h-full w-full"

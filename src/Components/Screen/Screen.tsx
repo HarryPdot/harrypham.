@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { About } from "../Pages/About/About";
+import { Projects } from "../Pages/Projects/Projects";
 const Screen = ({ selection }: any) => {
   return (
     <section
@@ -15,11 +16,11 @@ const Screen = ({ selection }: any) => {
           border-2
           h-full
           w-full
-          p-10
           border-screen
           "
     >
       {selection === "About" ? <About /> : null}
+      {selection === "Projects" ? <Projects /> : null}
     </section>
   );
 };
