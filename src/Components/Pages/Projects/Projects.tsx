@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 const Projects = () => {
   const { getProjectContent } = useContentful();
   const [projects, setProjects] = useState<any>([]);
+  const [selectProject, setSelectProject] = useState<any>([]);
+  const [open, setOpen] = useState<Boolean>(false);
   useEffect(() => {
     getProjectContent().then((res) => {
       let cleanUpProject = res?.map((item: any) => {
@@ -19,13 +21,21 @@ const Projects = () => {
       setProjects(cleanUpProject);
     });
   }, []);
+
+  const handleOpen = (item) => {
+    setOpen(true);
+    setSelectProject(item);
+    console.log(open);
+  };
+
   return (
-    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full pt-5 pb-5">
-      {projects.map((item, i) => {
+    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full relative">
+      {projects.map((item: any, i: number) => {
         return (
           <div
             key={i}
             className="border border-white w-1/4 h-52 cursor-pointer relative"
+            onClick={() => handleOpen(item)}
           >
             <picture className="">
               <img
@@ -41,6 +51,11 @@ const Projects = () => {
           </div>
         );
       })}
+      {open ? (
+        <section className="w-full h-screen bg-black absolute">
+          <div></div>
+        </section>
+      ) : null}
     </section>
   );
 };
