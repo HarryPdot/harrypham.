@@ -3,9 +3,8 @@ import { useContentful } from "@/Assets/Contentful/Contentful";
 import { About } from "../Pages/About/About";
 import { Projects } from "../Pages/Projects/Projects";
 import { ProjectModal } from "../Pages/Projects/ProjectModal";
-const Screen = ({ selection }: any) => {
+const Screen = ({ selection, open, setOpen }: any) => {
   const [selectProject, setSelectProject] = useState<any>([]);
-  const [open, setOpen] = useState<Boolean>(false);
 
   return (
     <section

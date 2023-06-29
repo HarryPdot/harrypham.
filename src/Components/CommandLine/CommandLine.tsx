@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CommandLine = ({ selection, setSelection }: any) => {
+const CommandLine = ({ selection, setSelection, open, setOpen }: any) => {
   const [hover, setHover] = useState<String>("");
   const [projectHover, setProjectHover] = useState<String>("");
 
@@ -16,6 +16,10 @@ const CommandLine = ({ selection, setSelection }: any) => {
     setProjectHover(option);
   };
 
+  const handleOpen = () => {
+    setOpen(false);
+  };
+
   const options = ["About", "Projects", "Credit"];
   return (
     <section
@@ -24,8 +28,7 @@ const CommandLine = ({ selection, setSelection }: any) => {
       col-start-1
       row-start-5
       row-end-7
-      pl-4
-      pr-4
+      p-5
       w-5/6
       xl:col-end-4
       lg:col-end-5
@@ -49,7 +52,6 @@ const CommandLine = ({ selection, setSelection }: any) => {
         flex
         flex-row
         gap-4
-
         justify-between
 
       "
@@ -65,7 +67,10 @@ const CommandLine = ({ selection, setSelection }: any) => {
               <div
                 key={i}
                 onMouseOver={() => handleHover(option)}
-                onClick={() => handleSelect()}
+                onClick={() => {
+                  handleSelect();
+                  handleOpen();
+                }}
                 className={
                   selection === option
                     ? " text-white p-1 rounded-r-3xl bg-gradient-radial from-[#744F23] to-80% to-[#AF7728] border-brightOrange border-2 w-full text-center cursor-pointer"
@@ -77,12 +82,6 @@ const CommandLine = ({ selection, setSelection }: any) => {
             );
           })}
         </div>
-        <div
-          className="
-          w-2/3
-
-        "
-        ></div>
       </div>
     </section>
   );

@@ -60,12 +60,14 @@ const Projects = ({ setOpen, setSelectProject }: any) => {
           );
         })}
       </section>
-      {hovered ? (
-        <section className="w-full h-16 flex justify-center items-center relative">
-          <div className="w-full bg-black opacity-50 absolute h-full"></div>
-          <div className="text-xl absolute">{hovered}</div>
-        </section>
-      ) : null}
+      <section className="w-full h-16 flex justify-center items-center relative">
+        {hovered ? (
+          <div className="w-full h-full flex justify-center items-center">
+            <div className="w-full bg-black opacity-50 absolute h-full"></div>
+            <div className="text-xl absolute">{hovered}</div>
+          </div>
+        ) : null}
+      </section>
     </section>
   );
 };

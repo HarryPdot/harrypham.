@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Screen } from "@/Components/Screen/Screen";
 
 export default function Home() {
+  const [open, setOpen] = useState<Boolean>(false);
   const [selection, setSelection] = useState<String>("About");
   const [xVar, setXVar] = useState<Number>(0);
   const [yVar, setYVar] = useState<Number>(0);
@@ -55,9 +56,14 @@ export default function Home() {
         bg-darkMode
       "
       >
-        <CommandLine selection={selection} setSelection={setSelection} />
+        <CommandLine
+          selection={selection}
+          setSelection={setSelection}
+          open={open}
+          setOpen={setOpen}
+        />
         <StatusBar />
-        <Screen selection={selection} />
+        <Screen selection={selection} open={open} setOpen={setOpen} />
       </section>
     </div>
   );
