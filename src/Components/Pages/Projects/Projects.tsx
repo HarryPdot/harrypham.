@@ -33,17 +33,17 @@ const Projects = ({ setOpen, setSelectProject }: any) => {
         return (
           <div
             key={i}
-            className="border border-white w-1/4 h-52 cursor-pointer relative"
+            className="border border-white w-1/4 h-52 cursor-pointer relative rounded-md overflow-hidden"
             onClick={() => handleOpen(item)}
           >
             <picture className="">
               <img
                 src={item.image}
                 alt=""
-                className="w-full h-full object-cover absolute"
+                className="w-full h-full object-cover absolute "
               />
             </picture>
-            <div className="w-full h-full bg-blend-overlay backdrop-blur-sm absolute bg-black opacity-60"></div>
+            <div className="w-full h-full bg-blend-overlay backdrop-blur-sm absolute bg-black opacity-60 rounded-lg"></div>
             <div className="absolute w-full h-full flex justify-center items-center p-5 text-center">
               <h2 className="text-lg">{item.name}</h2>
             </div>

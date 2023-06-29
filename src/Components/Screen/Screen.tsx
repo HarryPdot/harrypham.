@@ -22,6 +22,7 @@ const Screen = ({ selection }: any) => {
           w-full
           border-screen
           relative
+          bg-darkMode
           "
     >
       {selection === "About" ? <About /> : null}
