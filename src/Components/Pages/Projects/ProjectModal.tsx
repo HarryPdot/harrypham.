@@ -1,4 +1,9 @@
-const ProjectModal = ({ open, setOpen, selectProject, setSelectProject }) => {
+const ProjectModal = ({
+  open,
+  setOpen,
+  selectProject,
+  setSelectProject,
+}: any) => {
   const handleClose = () => {
     setOpen(false);
     setSelectProject([]);

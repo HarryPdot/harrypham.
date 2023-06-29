@@ -1,7 +1,7 @@
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { useEffect, useState } from "react";
 
-const Projects = ({ setOpen, setSelectProject }) => {
+const Projects = ({ setOpen, setSelectProject }: any) => {
   const { getProjectContent } = useContentful();
   const [projects, setProjects] = useState<any>([]);
 
