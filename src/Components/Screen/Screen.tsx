@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { About } from "../Pages/About/About";
 import { Projects } from "../Pages/Projects/Projects";
+import { ProjectModal } from "../Pages/Projects/ProjectModal";
 const Screen = ({ selection }: any) => {
+  const [selectProject, setSelectProject] = useState<any>([]);
+  const [open, setOpen] = useState<Boolean>(false);
+
   return (
     <section
       className="
@@ -17,10 +21,25 @@ const Screen = ({ selection }: any) => {
           h-full
           w-full
           border-screen
+          relative
           "
     >
       {selection === "About" ? <About /> : null}
-      {selection === "Projects" ? <Projects /> : null}
+      {selection === "Projects" ? (
+        <Projects
+          selectProject={selectProject}
+          setSelectProject={setSelectProject}
+          setOpen={setOpen}
+        />
+      ) : null}
+      {open ? (
+        <ProjectModal
+          open={open}
+          setOpen={setOpen}
+          selectProject={selectProject}
+          setSelectProject={setSelectProject}
+        />
+      ) : null}
     </section>
   );
 };

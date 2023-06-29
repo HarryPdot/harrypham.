@@ -1,11 +1,10 @@
 import { useContentful } from "@/Assets/Contentful/Contentful";
 import { useEffect, useState } from "react";
 
-const Projects = () => {
+const Projects = ({ setOpen, setSelectProject }) => {
   const { getProjectContent } = useContentful();
   const [projects, setProjects] = useState<any>([]);
-  const [selectProject, setSelectProject] = useState<any>([]);
-  const [open, setOpen] = useState<Boolean>(false);
+
   useEffect(() => {
     getProjectContent().then((res) => {
       let cleanUpProject = res?.map((item: any) => {
@@ -28,13 +27,8 @@ const Projects = () => {
     console.log(open);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-    setSelectProject([]);
-  };
-
   return (
-    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full relative">
+    <section className="flex flex-wrap gap-3 justify-center overflow-y-scroll w-full h-full absolute">
       {projects.map((item: any, i: number) => {
         return (
           <div
@@ -56,12 +50,6 @@ const Projects = () => {
           </div>
         );
       })}
-      {open ? (
-        <section className="w-full h-screen bg-black absolute">
-          <button onClick={() => handleClose()}>close</button>
-          <div>{selectProject.name}</div>
-        </section>
-      ) : null}
     </section>
   );
 };
